@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hover-scale {
+  @apply hover:scale-110 transition-transform duration-300;
+}
+
+:root{
+  --text-primary: rgb(95,196,243);
+  --text-secondary: rgb(42, 156, 255);
+  --bg-primary: rgb(241 245 249);
+  --bg-secondary: rgb(235, 238, 242);
+}
+
+.dark{
+  --text-primary: rgb(255,255,255);
+  --text-secondary: rgb(42, 156, 255);
+  --bg-primary: rgb(30 41 59);
+  --bg-secondary: rgb(15 23 42);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, Poppins;
+}
