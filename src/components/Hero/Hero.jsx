@@ -30,7 +30,7 @@ const Hero = () => {
                 <a href="https://stackoverflow.com/users/21582538/felix-nguyen" target='_blank'><i className="animate-slide_bot_in fa-brands fa-stack-overflow text-white text-center text-3xl md:text-4xl cursor-pointer hover-scale"></i></a>
             </div>
 
-            <button className='animate-slide_bot_in bg-white/40 dark:bg-black/60 text-white px-5 py-3 rounded-lg mt-10 hover-scale'>Resume</button>
+            <a href="https://drive.google.com/drive/folders/1NwSkI83ZxFFF0EhZ_g1pYaVojNutpp1v?usp=sharing" target='_blank'><button className='animate-slide_bot_in bg-white/40 dark:bg-black/60 text-white px-5 py-3 rounded-lg mt-10 hover-scale'>Resume</button></a>
             <i onClick={scrollToAbout} className="cursor-pointer dark:bg-black/60 text-white mt-8 rounded-full w-10 h-10 flex justify-center items-center text-lg animate-bounce bg-white/40 fa-solid fa-arrow-down"></i>
         </div>
     </>
