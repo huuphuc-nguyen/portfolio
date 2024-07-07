@@ -1,8 +1,13 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# My First Porfolio
+## I. Project description:
+This is the portfolio that I made after finishing React Advanced module in Meta Front-End Course.
+## II. Techonologies and Libraries
+- ReactJS, Vite.
+- React-router-dom.
+- AOS for animation
+- React-scroll.
+- Swiper for carousel.
+- Email JS for sending contact email.
+- Tailwind CSS.
+## III. Web Service Link
+https://portfolio-felixnguyen.vercel.app/
