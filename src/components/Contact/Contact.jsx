@@ -48,7 +48,7 @@ const Contact = () => {
     const [submitSuccess, setSubmitSuccess] = React.useState(false);
 
   return (
-    <div name='contact' className='w-full bg-bg_primary py-4 md:pt-16 px-10 lg:px-36 md:px-20 relative'>
+    <div name='contact' className='w-full bg-bg_primary py-4 md:pt-16 px-10 lg:px-36 md:px-20 relative overflow-hidden'>
         <h1 className='text-3xl md:text-5xl font-bold text-text_primary dark:text-white w-full text-center mb-10'>Contact Me</h1>
         <div className='grid grid-cols-1 lg:grid-cols-2 w-full'>
             <img className='w-[20rem] absolute -left-20 top-[13rem] opacity-40' src={circlebg}/>
@@ -97,14 +97,14 @@ const Contact = () => {
                 {submitSuccess && (
                         <p className='self-center text-green-500 text-sm mt-2'>Form submitted successfully!</p>
                     )}
-                <button className='bg-text_primary dark:bg-black/60 text-white cursor-pointer w-1/5 hover:opacity-70 hover:scale-110 transition-all duration-200 self-center rounded-xl py-2' 
+                <button className='bg-text_primary dark:bg-black/60 text-white cursor-pointer w-1/3 md:w-1/5 hover:opacity-70 hover:scale-110 transition-all duration-200 self-center rounded-xl py-2' 
                         type='submit' 
                         disabled={isSubmitting}>{isSubmitting ? 'Submitting...' : 'Submit'}</button>
             </form>
 
             <div className='w-full flex flex-col justify-center gap-4 items-center h-dvh'>
-                <h1 className='z-10 dark:text-white text-black text-bold text-3xl font-bold'>VISIT AND FOLLOW ME</h1>
-                <div className='z-10 flex gap-8 mt-8'>
+                <h1 data-aos='zoom-in' className='z-10 dark:text-white text-black text-bold text-2xl md:text-3xl font-bold'>VISIT AND FOLLOW ME</h1>
+                <div data-aos='zoom-in' className='z-10 flex gap-8 mt-8'>
                     <a href="https://www.linkedin.com/in/huuphuc-nguyen" target='_blank'><i className="fa-brands fa-linkedin text-black dark:text-white text-4xl cursor-pointer hover-scale"></i></a>
                     <a href="https://github.com/huuphuc-nguyen" target='_blank'><i className="fa-brands fa-github text-black dark:text-white text-4xl cursor-pointer hover-scale"></i></a>
                     <a href="https://stackoverflow.com/users/21582538/felix-nguyen" target='_blank'><i className="fa-brands fa-stack-overflow text-black dark:text-white text-4xl cursor-pointer hover-scale"></i></a>

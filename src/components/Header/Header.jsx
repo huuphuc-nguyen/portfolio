@@ -2,14 +2,17 @@ import React, {useState, useEffect, useRef} from 'react'
 import Sun from '../../assets/images/sun.png'
 import Moon from '../../assets/images/moon.png'
 import { scroller } from 'react-scroll'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 const Nav = ({children}) => {
+    const navigate= useNavigate();
+
     const scrollTo = (name) => {
         scroller.scrollTo(name, {
             duration: 800,
             delay: 0,
             smooth: 'easeInOutQuart',
-        });
+        }); 
     };
 
    return (
@@ -17,7 +20,18 @@ const Nav = ({children}) => {
         {React.Children.map(children, (child) => {
             return React.cloneElement(child, {
                 className: "animate-fadein opacity-0 cursor-pointer w-20 text-center dark:hover:bg-blue-800 hover:bg-blue-600 hover:text-white rounded-lg p-2",
-                onClick: () => scrollTo(child.props.children.toLowerCase())
+                onClick: () => {
+                    // Check if the current url has #section or not
+                    // If yes -> use scrollTo to scroll to the section
+                    // If not -> use navigate to navigate to the section
+                    // use Navigate instead of scrollTo directy to handle click from differnt pages
+                    if(window.location.href.includes('#')) {
+                        scrollTo(`${child.props.children.toLowerCase()}`);
+                    }
+                    else{
+                        navigate(`/#${child.props.children.toLowerCase()}`, {replace: true});
+                    }
+                    }
                 });
         })}
     </ul>
@@ -31,6 +45,8 @@ const Header = () => {
     });
 
     const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+    const location = useLocation();
 
     const headerRef = useRef(null);
 
@@ -68,6 +84,20 @@ const Header = () => {
     const handleThemeToggle = () => {
         setDarkMode(!darkMode);
     }
+
+    // This is used to handle when user click nav bar in Project Page
+    useEffect(() => {
+        const fragment = location.hash.replace('#', ''); // Extract fragment identifier
+        
+        // Check if fragment is not empty
+        if (fragment) {
+            scroller.scrollTo(fragment, {
+                duration: 800,
+                delay: 0,
+                smooth: 'easeInOutQuart',
+            });
+        }
+    }, [location.hash]); // Include location.hash in dependency array
 
   return (
     <div ref={headerRef} className="rounded-2xl z-20 sm:bg-white/60 sm:fixed top-4 left-1/2 transform -translate-x-1/2 dark:bg-black/40 dark:text-white text-black bg-white 
