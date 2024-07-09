@@ -128,7 +128,7 @@ const Header = () => {
                 <div className={`w-5 h-1 rounded-md bg-black dark:bg-white text-center transition-all duration-400 ${isBurgerOpen ? 'transform -rotate-45 absolute top-1/2' : ''}`}>{'\u00A0'}</div>
         </div>
 
-        <div className={`z-20 fixed top-0 left-0 w-full h-svh bg-white/90 dark:bg-black/80 ${isBurgerOpen ? 'block' : 'hidden'}
+        <div className={`z-20 fixed top-0 left-0 w-full h-dvh bg-white/90 dark:bg-black/80 ${isBurgerOpen ? 'block' : 'hidden'}
                         flex flex-col justify-center items-center gap-10 dark:text-white`}>
             <span className="animate-fadein opacity-0 shadow_lg bg-blue-600/80 dark:bg-blue-800 text-white p-2 rounded-xl shadow-md" style={{
                 fontWeight:700,
