@@ -23,13 +23,31 @@ export default {
         popup:{
           '0%': { transform: 'scale(0.5)', opacity: 0},
           '100%': { transform: 'scale(1)', opacity: 1},
-        }
+        },
+        burger_show:{
+          '0%': { width: '0px'},
+          '100%': { width: '1.25rem'}, // w-5 tailwind css 
+        },
+        burger_hide:{
+          '100%': { width: '0px'},
+        },
       },
       animation: {
         spread: 'spread 0.5s ease-in-out',
         fadein: 'fadein 0.2s ease-in-out 0.4s forwards',
         slide_bot_in: 'slide_bot_in 0.8s ease-in-out',
         popup: 'popup 0.5s ease-in-out forwards',
+        burger_show: 'burger_show 0.3s ease-in-out forwards',
+        burger_hide: 'burger_hide 0.3s ease-in-out forwards',
+            // Add -webkit-animation for Safari
+          '-webkit-animation': {
+            spread: 'spread 0.5s ease-in-out',
+            fadein: 'fadein 0.2s ease-in-out 0.4s forwards',
+            slide_bot_in: 'slide_bot_in 0.8s ease-in-out',
+            popup: 'popup 0.5s ease-in-out forwards',
+            burger_show: 'burger_show 0.3s ease-in-out forwards',
+            burger_hide: 'burger_hide 0.3s ease-in-out forwards',
+        },
       },
       colors: {
         text_primary: 'var(--text-primary)',
