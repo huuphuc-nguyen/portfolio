@@ -13,9 +13,9 @@ const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 const Contact = () => {
 
     const schema = yup.object().shape({
-        name: yup.string().required(),
-        email: yup.string().email().required(),
-        message: yup.string().required(),
+        name: yup.string().required("Required"),
+        email: yup.string().email("Invalid email address").required("Required"),
+        message: yup.string().required("Required").min(25, "Message must be at least 25 characters"),
     })
 
     const {register, handleSubmit, formState: {errors, isSubmitting}, reset} = useForm({
@@ -62,7 +62,7 @@ const Contact = () => {
                         id='name'
                         type='text'
                         placeholder='Enter your name'
-                        className='dark:text-white  dark:bg-black/60 -mt-2 pl-8 pr-3 py-1 border-2 border-black rounded-md w-full shadow-sm h-10'
+                        className={`dark:text-white  dark:bg-black/60 -mt-2 pl-8 pr-3 py-1 border-2 border-black ${errors.name ? 'border-red-500' : ''} rounded-md w-full shadow-sm h-10`}
                         {...register('name')}
                     />
                     {errors.name && <p className='text-red-500 text-sm mt-2'>{errors.name.message}</p>}
@@ -76,7 +76,7 @@ const Contact = () => {
                         id='email'
                         type='email'
                         placeholder='Enter your email'
-                        className='dark:text-white  dark:bg-black/60 -mt-2 pl-8 pr-3 py-1 border-2 border-black rounded-md w-full shadow-sm h-10'
+                        className={`dark:text-white  dark:bg-black/60 -mt-2 pl-8 pr-3 py-1 border-2 border-black ${errors.email ? 'border-red-500' : ''} rounded-md w-full shadow-sm h-10`}
                         {...register('email')}
                     />
                     {errors.email && <p className='text-red-500 text-sm mt-2'>{errors.email.message}</p>}
@@ -88,7 +88,7 @@ const Contact = () => {
                     <textarea
                         id='message'
                         placeholder='Send me a message...'
-                        className='dark:text-white  dark:bg-black/60 mt-4 pl-4 pr-3 py-1 border-2 border-black rounded-md w-full shadow-sm min-h-36 max-h-60 overflow-y-auto'
+                        className={`dark:text-white  dark:bg-black/60 mt-4 pl-4 pr-3 py-1 border-2 border-black ${errors.message ? 'border-red-500' : ''} rounded-md w-full shadow-sm min-h-36 max-h-60 overflow-y-auto`}
                         {...register('message')}
                     />
                     {errors.message && <p className='text-red-500 text-sm mt-2'>{errors.message.message}</p>} 
