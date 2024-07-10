@@ -3,6 +3,9 @@ import Sun from '../../assets/images/sun.png'
 import Moon from '../../assets/images/moon.png'
 import { scroller } from 'react-scroll'
 import { useNavigate, useLocation } from 'react-router-dom'
+import useDarkMode from '../../hooks/useDarkMode'
+import useScrollHeader from '../../hooks/useScrollHeader'
+import useHandleBurger from '../../hooks/useHandleBurger'
 
 const Nav = ({children, ...props}) => {
     const navigate= useNavigate();
@@ -45,64 +48,18 @@ const Nav = ({children, ...props}) => {
 }
 
 const Header = () => {
-    const [darkMode, setDarkMode] = useState(() => {
-        const savedMode = localStorage.getItem('darkMode');
-        return savedMode ? JSON.parse(savedMode) : false;
-    });
+    const {darkMode, handleDarkModeToggle} = useDarkMode();
+    const {headerRef, burgerRef} = useScrollHeader();
+    const {isBurgerOpen, handleBurgerClick} = useHandleBurger();
 
-    const [prevScrollPos, setPrevScrollPos] = useState(0);
 
     const location = useLocation();
 
-    const headerRef = useRef(null);
-    const burgerRef = useRef(null);
-
-    const [isBurgerOpen, setIsBurgerOpen] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScroll = window.scrollY;
-            const header = headerRef.current;
-            const burger = burgerRef.current;
-
-            if(prevScrollPos > currentScroll) {
-                header.style.transform = 'translate(-50%,0)';
-                burger.style.transform = 'translate(0,0)';
-            }
-            else {
-                header.style.transform = 'translate(-50%,-200%)';
-                burger.style.transform = 'translate(0,-300%)';
-            }
-
-            setPrevScrollPos(currentScroll);
-        }
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {window.removeEventListener('scroll', handleScroll)};
-    });
-
-    useEffect(() => {
-        if (darkMode) {
-            document.documentElement.classList.add('dark');
-            
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-        
-        localStorage.setItem('darkMode', JSON.stringify(darkMode));
-    }, [darkMode]);
-
-    const handleThemeToggle = () => {
-        setDarkMode(!darkMode);
-    }
-
     // This is used to handle when user click nav bar in Project Page
     useEffect(() => {
-        const fragment = location.hash.replace('#', ''); // Extract fragment identifier
-        
-        // Check if fragment is not empty
-        if (fragment) {
+        if (location.hash) {
+            const fragment = location.hash.replace('#', ''); // Extract fragment identifier
+
             scroller.scrollTo(fragment, {
                 duration: 800,
                 delay: 0,
@@ -110,12 +67,6 @@ const Header = () => {
             });
         }
     }, [location.hash]); // Include location.hash in dependency array
-
-    const handleBurgerClick = () => {
-        setIsBurgerOpen(!isBurgerOpen);
-        if (isBurgerOpen) {document.body.classList.remove('overflow-hidden');}
-        else {document.body.classList.add('overflow-hidden');}
-    };
 
   return (
     <>
@@ -141,7 +92,7 @@ const Header = () => {
                 <li>Contact</li>
             </Nav>
 
-            <img src={!darkMode ? Sun : Moon} className='animate-fadein opacity-0 w-10 cursor-pointer hover-scale' onClick={handleThemeToggle}/>
+            <img src={!darkMode ? Sun : Moon} className='animate-fadein opacity-0 w-10 cursor-pointer hover-scale' onClick={handleDarkModeToggle}/>
         </div>
     
         {/* Header Nav */}
@@ -161,7 +112,7 @@ const Header = () => {
                 <li>Contact</li>
             </Nav>
 
-            <img src={!darkMode ? Sun : Moon} className='animate-fadein opacity-0 w-10 cursor-pointer hover-scale' onClick={handleThemeToggle}/>
+            <img src={!darkMode ? Sun : Moon} className='animate-fadein opacity-0 w-10 cursor-pointer hover-scale' onClick={handleDarkModeToggle}/>
         </div>
     </>
   )

@@ -54,7 +54,7 @@ const ProjectDetail = () => {
                   }}
                   navigation={true}
                   modules={[Autoplay, Pagination, Navigation]}
-                  className="h-full md:h-[20rem] w-full md:w-[35rem] rounded-xl mt-5 mb-5"
+                  className="h-[15rem md:h-[20rem] w-full md:w-[35rem] rounded-xl mt-5 mb-5"
                 >
                   {project.img.map((img, index) => {
                       return  <SwiperSlide key={index}><img className='h-full w-full object-cover' src={img}/></SwiperSlide>
