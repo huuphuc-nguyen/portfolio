@@ -33,7 +33,23 @@ import project5 from '../images/javaSocket/project5.png'
 // .NET API for a Jewelry Store
 import project6 from '../images/webApi/project6.png'
 
+// FutureSelf - Time Capsule
+import project7 from '../images/futureSelf/project7.png'
+import project7_1 from '../images/futureSelf/project7_1.png'
+import project7_2 from '../images/futureSelf/project7_2.png'
+
 export const projectData = [  
+    {
+        id: 7,
+        title: 'FutureSelf - Time Capsule',
+        description: 'Back to the Future shows we can shape the future. Created for RowdyHackX, FutureSelf lets you send messages to your future self, keeping you motivated and focused on your goals with AI-powered Goal Tracking System.',  
+        img: [project7, project7_1, project7_2],
+        thumbnail: project7,
+        platform: 'Website',
+        techStack: "ReactJS, TailwindCSS, Supabase, NodeJS, Express, Vercel, Groq-api",
+        github: 'https://github.com/huuphuc-nguyen/FutureSelf',
+        demo:'https://sendtofutureself.vercel.app/'
+    },
     {
         id: 6,
         title: '.NET API for a Jewelry Store',
