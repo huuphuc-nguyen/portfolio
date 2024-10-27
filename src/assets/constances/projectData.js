@@ -34,9 +34,9 @@ import project5 from '../images/javaSocket/project5.png'
 import project6 from '../images/webApi/project6.png'
 
 // FutureSelf - Time Capsule
-import project7 from '../images/futureSelf/project7.png'
-import project7_1 from '../images/futureSelf/project7_1.png'
-import project7_2 from '../images/futureSelf/project7_2.png'
+import project7 from '../images/futureself/project7_1.png'
+import project7_1 from '../images/futureself/project7_2.png'
+import project7_2 from '../images/futureself/project7_3.png'
 
 export const projectData = [  
     {
