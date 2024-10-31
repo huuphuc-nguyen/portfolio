@@ -16,7 +16,12 @@ const Hero = () => {
 
   return (
     <>
-        <img name="home" src={Bg} className='w-full h-lvh relative'/>
+        <section name="home" className='w-full h-lvh relative bg-fixed' style={{
+          backgroundImage: `url(${Bg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+        }}>
         <div className='absolute inset-0 h-lvh w-full bg-black opacity-60'></div>
         <div className='absolute inset-0 flex flex-col items-center justify-center w-full mt-28'>
             <img src={Avatar} className='shadow-2xl animate-popup opacity-0 w-[10rem] p-1 mb-10 bg-white/40 dark:bg-black/60 border-4 rounded-full'/>
@@ -33,6 +38,7 @@ const Hero = () => {
             <a href="https://drive.google.com/drive/folders/1NwSkI83ZxFFF0EhZ_g1pYaVojNutpp1v?usp=sharing" target='_blank'><button className='animate-slide_bot_in bg-white/40 dark:bg-black/60 text-white px-5 py-3 rounded-lg mt-10 hover-scale'>Resume</button></a>
             <i onClick={scrollToAbout} className="cursor-pointer dark:bg-black/60 text-white mt-8 rounded-full w-10 h-10 flex justify-center items-center text-lg animate-bounce bg-white/40 fa-solid fa-arrow-down"></i>
         </div>
+        </section>
     </>
   )
 }

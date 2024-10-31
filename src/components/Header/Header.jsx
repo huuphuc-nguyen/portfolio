@@ -97,7 +97,7 @@ const Header = () => {
     
         {/* Header Nav */}
         <div ref={headerRef} className="rounded-2xl z-20 sm:bg-white/60 sm:fixed top-4 left-1/2 transform -translate-x-1/2 dark:bg-black/40 dark:text-white text-black bg-white 
-            sm:max-w-full sm:w-4/5 sm:h-16 overflow-hidden animate-spread transition-transform duration-500
+            sm:max-w-full sm:w-4/5 sm:h-16 overflow-hidden animate-spread transition-all duration-[800ms]
             hidden sm:flex sm:items-center sm:justify-between px-10 md:px-20"
             style={{ backdropFilter: 'blur(20px)' }}>
         

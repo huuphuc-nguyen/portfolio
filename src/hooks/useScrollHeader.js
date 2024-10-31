@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 // This hook handles the header and burger menu animation when scrolling
 
-const useDarkMode = () => {
+const useScrollHeader = () => {
     const headerRef = React.useRef(null);
     const burgerRef = React.useRef(null);
 
@@ -17,10 +17,14 @@ const useDarkMode = () => {
             if(prevScrollPos > currentScroll) {
                 header.style.transform = 'translate(-50%,0)';
                 burger.style.transform = 'translate(0,0)';
+                header.style.opacity = '1';
+                burger.style.opacity = '1';
             }
             else {
                 header.style.transform = 'translate(-50%,-200%)';
                 burger.style.transform = 'translate(0,-300%)';
+                header.style.opacity = '0';
+                burger.style.opacity = '0';
             }
 
             setPrevScrollPos(currentScroll);
@@ -34,4 +38,4 @@ const useDarkMode = () => {
     return { headerRef, burgerRef };
 }
 
-export default useDarkMode;
+export default useScrollHeader;
