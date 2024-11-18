@@ -38,6 +38,17 @@ import project7 from '../images/futureself/project7_1.png'
 import project7_1 from '../images/futureself/project7_2.png'
 import project7_2 from '../images/futureself/project7_3.png'
 
+// Meal Match - Android Application
+import project8 from '../images/mealMatch/project8.png'
+import project8_1 from '../images/mealMatch/project8_1.png'
+import project8_2 from '../images/mealMatch/project8_2.png'
+import project8_3 from '../images/mealMatch/project8_3.png'
+import project8_4 from '../images/mealMatch/project8_4.png'
+import project8_5 from '../images/mealMatch/project8_5.png'
+import project8_6 from '../images/mealMatch/project8_6.png'
+import project8_7 from '../images/mealMatch/project8_7.png'
+import project8_8 from '../images/mealMatch/project8_8.png'
+
 export const projectData = [  
     {
         id: 7,
@@ -49,6 +60,17 @@ export const projectData = [
         techStack: "ReactJS, TailwindCSS, Supabase, NodeJS, Express, Vercel, Groq-api",
         github: 'https://github.com/huuphuc-nguyen/FutureSelf',
         demo:'https://sendtofutureself.vercel.app/'
+    },
+    {
+        id: 8,
+        title: 'MealMatch Android App',
+        description: '🍽️ MealMatch – The ultimate meal planning and recipe discovery companion! 🥗✨ Browse diverse dishes, save your favorites 💖, and generate smart grocery lists 🛒. Powered by RecyclerView, Glide, and AI-driven recommendations for a seamless, visually stunning experience. Perfect for foodies and meal preppers! 📲🍳',  
+        img: [project8, project8_1, project8_2, project8_3, project8_4, project8_5, project8_6, project8_7, project8_8],
+        thumbnail: project8_2,
+        platform: 'Android Mobile',
+        techStack: "Java, Android Studio, Glide, RecyclerView, XML, Groq-api",
+        github: 'https://github.com/huuphuc-nguyen/Android-Meal-Match',
+        demo:'https://www.youtube.com/watch?v=_KXYF5j-sL4'
     },
     {
         id: 6,

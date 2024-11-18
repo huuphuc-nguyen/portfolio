@@ -28,7 +28,7 @@ const About = () => {
         </section>
         <section>
             <h2 className='mb-8 text-text_secondary mt-10 text-2xl md:text-3xl font-bold'>Tech-stack and Tools</h2>
-            <div className='flex flex-wrap justify-center md:justify-between items-center'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 justify-items-center'>
                 {techStackData.map((tech, index) => {
                     return <TechCard key={index} img={tech.img} name={tech.name}/>
                 })}

@@ -13,6 +13,11 @@ import net from '../images/techLogo/net.png';
 import ef from '../images/techLogo/ef.png';
 import auto from '../images/techLogo/auto.png';
 import vercel from '../images/techLogo/vercel.png';
+import python from '../images/techLogo/python.png';
+import java from '../images/techLogo/java.png';
+import android from '../images/techLogo/androidstudio.png';
+import supabase from '../images/techLogo/supabase.png';
+import groq from '../images/techLogo/groq.png';
 
 export const techStackData = [
     {img: html, name: 'HTML'},
@@ -22,12 +27,18 @@ export const techStackData = [
     {img: react, name: 'ReactJS'},
     {img: tailwind, name: 'Tailwind CSS'},
     {img: redux, name: 'Redux Toolkit'},
-    {img: git, name: 'Git'},
-    {img: figma, name: 'Figma'},
-    {img: cs, name: 'C#'},
-    {img: sql, name: 'SQL Server'},
     {img: net, name: '.NET Core'},
     {img: ef, name: 'EF Core'},
     {img: auto, name: 'Auto Mapper'},
+    {img: sql, name: 'SQL Server'},
+    {img: supabase, name: 'Supabase'},
+    {img: python, name: 'Python'},
+    {img: java, name: 'Java'},
+    {img: cs, name: 'C#'},
+    {img: git, name: 'Git'},
+    {img: figma, name: 'Figma'},
     {img: vercel, name: 'Vercel'},
+    {img: android, name: 'Android Studio'},
+    {img: groq, name: 'Groq AI API'},
+    
 ]

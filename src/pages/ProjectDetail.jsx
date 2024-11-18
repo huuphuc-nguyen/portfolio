@@ -4,6 +4,7 @@ import { projectData } from '../assets/constances/projectData'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import circlebg from '../assets/images/circlebg.png';
+import useImageStyle from '../hooks/useImageStyle';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -13,6 +14,14 @@ const ProjectDetail = () => {
 
     const { id } = useParams();
     const project = projectData.find((project) => project.id === parseInt(id));
+
+    const {imageStyle, handleImageStyle} = useImageStyle();
+
+    React.useEffect(() => {
+      const img = new Image();
+      img.src = project.thumbnail;
+      img.onload = handleImageStyle;
+    }, [project.thumbnail]);
 
     React.useEffect(() => {
       window.scrollTo(0, 0); // Scrolls to the top of the page
@@ -57,7 +66,7 @@ const ProjectDetail = () => {
                   className="h-[15rem md:h-[20rem] w-full md:w-[35rem] rounded-xl mt-5 mb-5"
                 >
                   {project.img.map((img, index) => {
-                      return  <SwiperSlide key={index}><img className='h-full w-full object-cover' src={img}/></SwiperSlide>
+                      return  <SwiperSlide key={index}><img className={`h-full w-full ${imageStyle}`} src={img}/></SwiperSlide>
                   })}
                 </Swiper>
             </div>
