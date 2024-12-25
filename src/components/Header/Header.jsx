@@ -86,7 +86,7 @@ const Header = () => {
                 }}>Felix Nguyen</span>
 
             <Nav handleBurgerClick={handleBurgerClick}> 
-                <li>Home</li>
+                <li>Home Test</li>
                 <li>About</li>
                 <li>Projects</li>
                 <li>Contact</li>
