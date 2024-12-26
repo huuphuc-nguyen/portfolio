@@ -103,7 +103,7 @@ const Header = () => {
         
             <span className="animate-fadein opacity-0 shadow_lg bg-blue-600/80 dark:bg-blue-800 text-white p-2 rounded-xl shadow-md" style={{
             fontWeight:700,
-            }}>Felix Nguyen</span>
+            }}>Felix Nguyen Test</span>
 
             <Nav> 
                 <li>Home</li>
