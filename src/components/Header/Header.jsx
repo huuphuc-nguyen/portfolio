@@ -86,7 +86,7 @@ const Header = () => {
                 }}>Felix Nguyen</span>
 
             <Nav handleBurgerClick={handleBurgerClick}> 
-                <li>Home Test</li>
+                <li>Home</li>
                 <li>About</li>
                 <li>Projects</li>
                 <li>Contact</li>
@@ -103,7 +103,7 @@ const Header = () => {
         
             <span className="animate-fadein opacity-0 shadow_lg bg-blue-600/80 dark:bg-blue-800 text-white p-2 rounded-xl shadow-md" style={{
             fontWeight:700,
-            }}>Felix Nguyen Test</span>
+            }}>Felix Nguyen</span>
 
             <Nav> 
                 <li>Home</li>
