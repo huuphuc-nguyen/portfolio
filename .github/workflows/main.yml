@@ -20,6 +20,7 @@ jobs:
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.VPS_SSH_KEY }}
         port: ${{ secrets.VPS_PORT }}
+        proxy_port: ${{ secrets.VPS_PORT }}
         script: |
           cd ~/gitproject/Portfolio
           git pull origin main
