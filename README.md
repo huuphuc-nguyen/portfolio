@@ -1,5 +1,4 @@
 # My First Porfolio
-Test action at new port
 ## I. Project description:
 This is the portfolio that I made after finishing React Advanced module in Meta Front-End Course.
 ## II. Techonologies and Libraries
