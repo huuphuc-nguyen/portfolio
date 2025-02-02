@@ -20,7 +20,7 @@ const ResumeViewer = ({isShow, setShowResume}) => {
     
   return (
     <section className="absolute inset-0 flex items-center justify-center w-full h-full bg-black/80 z-50">
-      <div className='absolute m-4 top-0 flex flex-row w-full justify-center gap-4'>
+      <div className='absolute m-4 top-0 flex flex-row w-full justify-center md:justify-end md:px-20 gap-4'>
         <a
           href="https://drive.google.com/uc?id=1eSi65Go6jwQptNQv8QJzd9_YnRPwEZtU&export=download"
           download
@@ -37,7 +37,7 @@ const ResumeViewer = ({isShow, setShowResume}) => {
       <iframe
               src="https://drive.google.com/file/d/1eSi65Go6jwQptNQv8QJzd9_YnRPwEZtU/preview"
               title="Resume"
-              className="border-0 rounded-lg w-full h-[80%] "
+              className="border-0 rounded-lg w-full md:w-1/2 md:h-full h-[80%] py-4"
       />
   
        
