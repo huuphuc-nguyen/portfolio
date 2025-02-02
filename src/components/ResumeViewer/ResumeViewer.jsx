@@ -5,16 +5,39 @@ const ResumeViewer = ({isShow, setShowResume}) => {
     const handleOnClick = () => {
         setShowResume(false)
     }
+
+    React.useEffect(() => {
+        if (isShow) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = 'auto'
+        }
+
+        return () => {
+            document.body.style.overflow = 'auto'
+        }
+    }, [isShow])
     
   return (
     <section className="absolute inset-0 flex items-center justify-center w-full h-full bg-black/80 z-50">
-      <button className="absolute top-4 right-4 p-2 text-white bg-red-500/80 rounded-md" onClick={handleOnClick}>
-        Close
-      </button>
+      <div className='absolute m-4 top-0 flex flex-row w-full justify-center gap-4'>
+        <a
+          href="https://drive.google.com/uc?id=1eSi65Go6jwQptNQv8QJzd9_YnRPwEZtU&export=download"
+          download
+          className=" p-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-300"
+        >
+          Download Resume
+        </a>
+        
+        <button className=" p-2 text-white bg-red-500/80 rounded-md" onClick={handleOnClick}>
+          Close
+        </button>
+      </div>
+      
       <iframe
-              src="../../../../public/HuuPhucNguyen_Resume.pdf"
+              src="https://drive.google.com/file/d/1eSi65Go6jwQptNQv8QJzd9_YnRPwEZtU/preview"
               title="Resume"
-              className="border-0 rounded-lg w-full h-[80%] md:w-3/4 md:h-screen"
+              className="border-0 rounded-lg w-full h-[80%] "
       />
   
        
