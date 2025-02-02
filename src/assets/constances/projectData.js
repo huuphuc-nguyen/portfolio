@@ -81,7 +81,7 @@ export const projectData = [
         platform: 'Web API',
         techStack: ".NET 6, C#, Entity Framework, SQL Server, Swagger, JWT, AutoMapper, Docker, Azure",
         github: 'https://github.com/huuphuc-nguyen/ASP.NET-CORE-TiemVangKimCuc-SER/',
-        demo:'https://webtiemvangkimcucser.azurewebsites.net/'
+        demo:'https://api.tiemvangkimcuclx.com/'
     },
     {
         id: 1,
@@ -101,7 +101,7 @@ export const projectData = [
         platform: 'Web',
         techStack: 'HTML, CSS, Javascript',
         github: 'https://github.com/huuphuc-nguyen/HTML-CSS-JS-Mangata-Gallo-Webpage/',
-        demo:'https://huuphuc-nguyen.github.io/HTML-CSS-JS-Mangata-Gallo-Webpage/'
+        demo:'https://felixnguyen.dev/mangatagallo/'
     },
     {
         id: 2,
@@ -110,12 +110,12 @@ export const projectData = [
         img: [
             project2,
             project2_1
-        ],
+        ],  
         thumbnail: project2,
         platform: 'Web',
         techStack: "ReactJS, Redux Toolkit, CSS, Vercel, OMDB API",
         github: 'https://github.com/huuphuc-nguyen/ReactJs-Movie-App/',
-        demo:'https://movieapp-felixnguyen.vercel.app/'
+        demo:'https://felixnguyen.dev/movieapp/'
     },
     {
         id: 3,
