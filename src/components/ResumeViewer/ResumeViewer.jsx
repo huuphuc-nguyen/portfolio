@@ -19,7 +19,7 @@ const ResumeViewer = ({isShow, setShowResume}) => {
     }, [isShow])
     
   return (
-    <section className="fixed inset-0 flex items-center justify-center w-full h-full bg-black/80 z-50">
+    <section className="fixed inset-0 flex items-center justify-center w-full h-full bg-black/80 z-50" onClick={handleOnClick}>
       <div className='fixed m-4 top-0 flex flex-row w-full justify-end md:px-60 md:top-4 gap-4'>
         <a
           href="https://drive.google.com/uc?id=1eSi65Go6jwQptNQv8QJzd9_YnRPwEZtU&export=download"
