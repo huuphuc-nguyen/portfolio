@@ -49,6 +49,10 @@ import project8_6 from '../images/mealMatch/project8_6.png'
 import project8_7 from '../images/mealMatch/project8_7.png'
 import project8_8 from '../images/mealMatch/project8_8.png'
 
+// TicTacToe Game
+import project9 from '../images/tictactoe/1.png'
+import project9_1 from '../images/tictactoe/2.png'
+
 export const projectData = [  
     {
         id: 7,
@@ -116,6 +120,20 @@ export const projectData = [
         techStack: "ReactJS, Redux Toolkit, CSS, Vercel, OMDB API",
         github: 'https://github.com/huuphuc-nguyen/ReactJs-Movie-App/',
         demo:'https://felixnguyen.dev/movieapp/'
+    },    
+    {
+        id: 9,
+        title: 'TicTacToe Game',
+        description: 'A ReactJS project that stimulates TicTacToe game with 2 players mode, allow players to undo the past moves, and reset the game.',
+        img: [
+            project9,
+            project9_1
+        ],  
+        thumbnail: project9,
+        platform: 'Web',
+        techStack: "ReactJS",
+        github: 'https://github.com/huuphuc-nguyen/ReactJs-Tic-Tac-Toe/',
+        demo:'https://felixnguyen.dev/tictactoe/'
     },
     {
         id: 3,
