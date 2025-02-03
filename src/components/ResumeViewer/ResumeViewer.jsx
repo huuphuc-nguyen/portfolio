@@ -19,8 +19,8 @@ const ResumeViewer = ({isShow, setShowResume}) => {
     }, [isShow])
     
   return (
-    <section className="absolute inset-0 flex items-center justify-center w-full h-full bg-black/80 z-50">
-      <div className='absolute m-4 top-0 flex flex-row w-full justify-center md:justify-end md:px-20 gap-4'>
+    <section className="fixed inset-0 flex items-center justify-center w-full h-full bg-black/80 z-50">
+      <div className='fixed m-4 top-0 flex flex-row w-full justify-center md:justify-end md:px-20 gap-4'>
         <a
           href="https://drive.google.com/uc?id=1eSi65Go6jwQptNQv8QJzd9_YnRPwEZtU&export=download"
           download
