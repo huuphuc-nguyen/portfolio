@@ -20,17 +20,17 @@ const ResumeViewer = ({isShow, setShowResume}) => {
     
   return (
     <section className="fixed inset-0 flex items-center justify-center w-full h-full bg-black/80 z-50">
-      <div className='fixed m-4 top-0 flex flex-row w-full justify-center md:justify-end md:px-20 gap-4'>
+      <div className='fixed m-4 top-0 flex flex-row w-full justify-center md:justify-end md:px-60 md:top-4 gap-4'>
         <a
           href="https://drive.google.com/uc?id=1eSi65Go6jwQptNQv8QJzd9_YnRPwEZtU&export=download"
           download
-          className=" p-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-300"
+          className= "text-white"
         >
-          Download Resume
+          <i className="fa-solid fa-cloud-arrow-down text-3xl"></i>
         </a>
         
-        <button className=" p-2 text-white bg-red-500/80 rounded-md" onClick={handleOnClick}>
-          Close
+        <button className=" text-white" onClick={handleOnClick}>
+          <i className="fa-solid fa-circle-xmark text-3xl"></i>
         </button>
       </div>
       
