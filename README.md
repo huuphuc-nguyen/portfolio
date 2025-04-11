@@ -11,6 +11,3 @@ This is the portfolio that I made after finishing React Advanced module in Meta 
 - Tailwind CSS.
 ## III. Web Service Link
 https://felixnguyen.dev/
-
-This is for testing PR
-sencond
