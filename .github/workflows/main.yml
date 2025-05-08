@@ -51,7 +51,7 @@ jobs:
           proxy_port: ${{ secrets.VPS_PORT }}
           script: |
             docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
-
             cd ~/projects/my-projects
-            sed "s|__Portfolio__SHA__|${{ github.sha }}|g" my-projects-stack.template.yml > my-projects-stack.yml
+            SHA=${{ github.sha }}
+            sed -i "s|\(ghcr.io/huuphuc-nguyen/portfolio:\)[^[:space:]]\+|\1$SHA|" my-projects-stack.yml
             docker stack deploy --with-registry-auth -c my-projects-stack.yml my-projects
