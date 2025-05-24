@@ -30,7 +30,7 @@ jobs:
       - name: Set image tag
         id: image-tag
         run: |
-          if [[ "${{ github.ref }}" == "main" || "${{ github.ref }}" == "production" ]]; then
+          if [[ "${{ github.ref_name }}" == "main" || "${{ github.ref_name }}" == "production" ]]; then
             echo "tag=${{ steps.version.outputs.VERSION }}" >> $GITHUB_OUTPUT
           else
             echo "tag=${{ github.sha }}" >> $GITHUB_OUTPUT
