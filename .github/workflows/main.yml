@@ -71,6 +71,6 @@ jobs:
           # Also update Chart.yaml appVersion and/or version
           yq eval ".appVersion = \"${{ steps.version.outputs.VERSION }}\"" -i projects/personal-project/apps/portfolio/Chart.yaml
           
-          git add projects/personal-project/apps/portfolio/values.yaml
+          git add .
           git commit -m "Cicd:Update image tag of Portfolio to ${{ steps.image-tag.outputs.tag }}"
           git push
