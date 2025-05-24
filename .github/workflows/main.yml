@@ -30,7 +30,7 @@ jobs:
       - name: Set image tag
         id: image-tag
         run: |
-          if [[ "${{ github.ref_name }}" == "main" || "${{ github.ref_name }}" == "production" ]]; then
+          if [[ "${{ github.ref }}" == "main" || "${{ github.ref }}" == "production" ]]; then
             echo "tag=1.0.0" >> $GITHUB_OUTPUT
           else
             echo "tag=${{ github.sha }}" >> $GITHUB_OUTPUT
@@ -62,7 +62,7 @@ jobs:
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
   
-          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/huuphuc-nguyen/gitops-infras.git
+          git clone https://x-access-token:${{ secrets.GH_PAT }}@github.com/huuphuc-nguyen/gitops-infras.git
           cd gitops-infras
   
           yq eval ".image.tag = \"${{ steps.image-tag.outputs.tag }}\"" -i projects/personal-project/apps/portfolio/values.yaml
