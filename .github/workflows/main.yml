@@ -31,7 +31,7 @@ jobs:
         id: image-tag
         run: |
           if [[ "${{ github.ref }}" == "main" || "${{ github.ref }}" == "production" ]]; then
-            echo "tag=1.0.0" >> $GITHUB_OUTPUT
+            echo "tag=${{ steps.version.outputs.VERSION }}" >> $GITHUB_OUTPUT
           else
             echo "tag=${{ github.sha }}" >> $GITHUB_OUTPUT
           fi
@@ -68,5 +68,5 @@ jobs:
           yq eval ".image.tag = \"${{ steps.image-tag.outputs.tag }}\"" -i projects/personal-project/apps/portfolio/values.yaml
   
           git add projects/personal-project/apps/portfolio/values.yaml
-          git commit -m "Cicd:Update image tag to ${{ steps.image-tag.outputs.tag }}"
+          git commit -m "Cicd:Update image tag of Portfolio to ${{ steps.image-tag.outputs.tag }}"
           git push
