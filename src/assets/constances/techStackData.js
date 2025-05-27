@@ -18,8 +18,16 @@ import java from '../images/techLogo/java.png';
 import android from '../images/techLogo/androidstudio.png';
 import supabase from '../images/techLogo/supabase.png';
 import groq from '../images/techLogo/groq.png';
+import docker from '../images/techLogo/docker.png';
+import kubernetes from '../images/techLogo/kubernetes.png';
+import helm from '../images/techLogo/helm.png';
+import nginx from '../images/techLogo/nginx.png';
 
 export const techStackData = [
+    {img: kubernetes, name: 'Kubernetes'},
+    {img: helm, name: 'Helm'},
+    {img: docker, name: 'Docker'},
+    {img: nginx, name: 'Nginx'},
     {img: html, name: 'HTML'},
     {img: css, name: 'CSS'},
     {img: js, name: 'Javascript'},
@@ -40,5 +48,4 @@ export const techStackData = [
     {img: vercel, name: 'Vercel'},
     {img: android, name: 'Android Studio'},
     {img: groq, name: 'Groq AI API'},
-    
 ]

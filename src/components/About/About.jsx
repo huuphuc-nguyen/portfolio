@@ -21,7 +21,7 @@ const About = () => {
             <ul className='list-disc'>
                 <li className='text-lg text-gray-500 dark:text-white ml-10 mt-5 mb-1'><strong>Desktop:</strong> Using WPF and Java Swing</li>
                 <li className='text-lg text-gray-500 dark:text-white ml-10 mb-1'><strong>Mobile:</strong> Focusing on Android development with Java</li>
-                <li className='text-lg text-gray-500 dark:text-white ml-10 mb-1'><strong>Web:</strong> Building websites using vanilla HTML/CSS and ReactJS</li>
+                <li className='text-lg text-gray-500 dark:text-white ml-10 mb-1'><strong>Web:</strong> Building websites using vanilla HTML/CSS, ReactJS and NextJS</li>
             </ul>
             <br/>
             <p className='text-lg text-gray-500 dark:text-white'>Recently, my focus has shifted towards full-stack web development. I specialize in using ReactJS and TailwindCSS for front-end development, .NET technologies for the back end, and SQL Server for database management.</p>
