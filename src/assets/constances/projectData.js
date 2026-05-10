@@ -71,13 +71,39 @@ import project11_7 from "../images/yapchat/project11_7.png";
 import project11_8 from "../images/yapchat/project11_8.png";
 import project11_9 from "../images/yapchat/project11_9.png";
 
+// Wordle
+import project12_1 from "../images/wordle/project12_1.png";
+import project12_2 from "../images/wordle/project12_2.png";
+
 export const projectData = [
+  {
+    id: 12,
+    title: "Wordle",
+    description:
+      " A full-stack Wordle clone built with React, TypeScript, and FastAPI — recreating the daily puzzle experience with persistent game sessions, signed JWT cookies (HttpOnly, XSS-safe) for seamless session tracking, and a clean keyboard-first UI. Each player gets an independent secret word, game state is persisted to PostgreSQL, and abandoned sessions are automatically cleaned up. Deployed on a self-hosted k3s cluster with multi-arch Docker images and a GitOps CI/CD pipeline powered by GitHub Actions and Rancher Fleet.",
+    img: [project12_1, project12_2],
+    thumbnail: project12_1,
+    platform: "Website",
+    techStack: "React, TypeScript, TailwindCSS, FastAPI, PostgreSQL",
+    github: "https://github.com/huuphuc-nguyen/wordle",
+    demo: "https://felixnguyen.dev/wordle",
+  },
   {
     id: 11,
     title: "Yap Chat",
     description:
       "🗨️ YapChat is a modern real-time messaging platform built with React, TypeScript, and Go, leveraging WebSockets for instant communication and Clerk for secure user authentication. Designed for speed and scalability, it supports 1-on-1 and group chats, typing indicators, and online presence—all with a clean, responsive UI.",
-    img: [project11_1, project11_2, project11_3, project11_4, project11_5, project11_6, project11_7, project11_8, project11_9],
+    img: [
+      project11_1,
+      project11_2,
+      project11_3,
+      project11_4,
+      project11_5,
+      project11_6,
+      project11_7,
+      project11_8,
+      project11_9,
+    ],
     thumbnail: project11_1,
     platform: "Website",
     techStack: "NextJS, TypeScript, TailwindCSS, Firebase, Stripe",
